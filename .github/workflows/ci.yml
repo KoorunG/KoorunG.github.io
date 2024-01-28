@@ -3,16 +3,12 @@ name: CI
 on:
   push:
     branches: ["main"]
-    paths: ["docs/**"]
   pull_request:
 
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: docs
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
@@ -22,7 +18,7 @@ jobs:
         with:
           ruby-version: '3.2.0'
           bundler-cache: true
-          working-directory: '${{ github.workspace }}/docs'
+          working-directory: '${{ github.workspace }}'
           cache-version: 0
 
       - name: Build with Jekyll

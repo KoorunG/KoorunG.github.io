@@ -1,11 +1,11 @@
-title: KoorunG blog
+title: KoorunG's blog
 description: KoorunG's Github Pages
 theme: just-the-docs
 
 url: https://koorung.github.io/
 
 aux_links:
-  Template Repository: https://github.com/koorung/koorung.github.io
+  KoorunG's Github: https://github.com/KoorunG
 
 plugins:
   - jekyll-default-layout
