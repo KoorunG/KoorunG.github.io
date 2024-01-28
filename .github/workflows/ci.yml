@@ -23,3 +23,6 @@ jobs:
           
       - name: Build Jekyll for GitHub Pages
         uses: actions/jekyll-build-pages@v1.0.9
+        with:
+          source: "docs/"
+          destination: "docs/_site"
