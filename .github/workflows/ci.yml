@@ -16,7 +16,7 @@ jobs:
       - name: Setup Ruby, JRuby and TruffleRuby
         uses: ruby/setup-ruby@v1.170.0
         with:
-          ruby-version: 'latest'
+          ruby-version: '3.2.0'
           bundler-cache: true
           working-directory: '${{ github.workspace }}/docs'
           cache-version: 0
