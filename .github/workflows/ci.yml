@@ -9,6 +9,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
@@ -20,9 +23,6 @@ jobs:
           bundler-cache: true
           working-directory: '${{ github.workspace }}/docs'
           cache-version: 0
-          
-      - name: Build Jekyll for GitHub Pages
-        uses: actions/jekyll-build-pages@v1.0.9
-        with:
-          source: "docs/"
-          destination: "docs/_site"
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
