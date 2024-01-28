@@ -46,6 +46,7 @@ jobs:
           cache-version: 0
 
       - name: Configure GitHub Pages
+        id: pages
         uses: actions/configure-pages@v4.0.0
 
       - name: Build with Jekyll
@@ -75,5 +76,6 @@ jobs:
     needs: build
     steps:
       - name: Deploy GitHub Pages site
+        id: deployment
         uses: actions/deploy-pages@v4.0.3
           
